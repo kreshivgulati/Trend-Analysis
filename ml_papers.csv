@@ -1,0 +1,201 @@
+title,year,citations
+Scikit-learn: Machine Learning in Python,2012,63706
+"Genetic algorithms in search, optimization, and machine learning",1989,49334
+C4.5: Programs for Machine Learning,1992,23698
+UCI Machine Learning Repository,2007,24350
+Data Mining: Practical Machine Learning Tools and Techniques,2011,25712
+Pattern Recognition and Machine Learning,2007,22082
+"Genetic Algorithms in Search, Optimization and Machine Learning",1988,17771
+Proceedings of the 24th international conference on Machine learning,2007,11734
+Gaussian Processes for Machine Learning,2005,10489
+Machine learning a probabilistic perspective,2012,9328
+"Machine learning: Trends, perspectives, and prospects",2015,9537
+Pattern Recognition and Machine Learning,2006,9859
+UCI Repository of machine learning databases,1998,10547
+Scikit-learn: Machine Learning in Python,2011,8210
+TensorFlow: A system for large-scale machine learning,2016,8823
+Machine learning in automated text categorization,2002,7889
+Programs for Machine Learning,1994,5804
+Pattern Recognition and Machine Learning,2007,8434
+TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems,2016,9777
+Physics-informed machine learning,2021,6457
+Ensemble Methods in Machine Learning,2000,7822
+Quantum machine learning,2017,4411
+Federated Machine Learning,2019,5831
+TensorFlow: a system for large-scale machine learning,2016,6353
+The use of the area under the ROC curve in the evaluation of machine learning algorithms,1997,7217
+Pattern Recognition and Machine Learning (Information Science and Statistics),2006,8357
+Pattern Recognition and Machine Learning,2007,4652
+Practical Bayesian Optimization of Machine Learning Algorithms,2012,5668
+Machine learning for molecular and materials science,2018,4488
+Proceedings of the 25th international conference on Machine learning,2008,5549
+Machine Learning in Medicine,2019,3908
+Text categorization with Support Vector Machines: Learning with many relevant features,1998,7980
+Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting,2015,6646
+Gaussian Processes in Machine Learning,2004,5113
+Large-Scale Machine Learning with Stochastic Gradient Descent,2010,5621
+Encyclopedia of Machine Learning,2010,3461
+Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead,2019,8842
+Machine Learning in Medicine,2015,3399
+Multimodal Machine Learning: A Survey and Taxonomy,2018,4172
+"Machine Learning: Algorithms, Real-World Applications and Research Directions",2021,5085
+Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms,2017,6084
+Proceedings of the 25th international conference on Machine learning - ICML '08,2008,6716
+Supervised Machine Learning: A Review of Classification Techniques,2007,4147
+Understanding Machine Learning,2014,2914
+Some Studies in Machine Learning Using the Game of Checkers,1959,4340
+Machine Learning for High-Speed Corner Detection,2006,4372
+Machine Learning in Agriculture: A Review,2018,3002
+Membership Inference Attacks Against Machine Learning Models,2017,4201
+SoilGrids250m: Global gridded soil information based on machine learning,2017,4644
+Machine learning and deep learning,2021,2458
+Correlation-based Feature Selection for Machine Learning,1998,3502
+MoleculeNet: a benchmark for molecular machine learning,2017,2925
+Selection of relevant features and examples in machine learning,1997,3293
+Towards A Rigorous Science of Interpretable Machine Learning,2017,3143
+The MNIST Database of Handwritten Digit Images for Machine Learning Research [Best of the Web],2012,4600
+Understanding Machine Learning: From Theory To Algorithms,2015,3091
+Dlib-ml: A Machine Learning Toolkit,2009,2923
+Machine Learning Algorithms - A Review,2020,2455
+Machine Learning for Fluid Mechanics,2019,2585
+Genetic Algorithms and Machine Learning,1988,3028
+ilastik: interactive machine learning for (bio)image analysis,2019,3592
+On hyperparameter optimization of machine learning algorithms: Theory and practice,2020,3119
+A few useful things to know about machine learning,2012,3238
+Applications of machine learning in drug discovery and development,2019,2914
+Machine learning for neuroimaging with scikit-learn,2014,2635
+An Introduction to MCMC for Machine Learning,2003,2412
+Machine learning applications in cancer prognosis and prediction,2014,3284
+Machine learning and the physical sciences,2019,2420
+Extreme learning machine: Theory and applications,2006,13150
+"Predicting the Future — Big Data, Machine Learning, and Clinical Medicine",2016,3467
+Practical Black-Box Attacks against Machine Learning,2017,3475
+An Introduction to Support Vector Machines and Other Kernel-based Learning Methods,2000,13872
+Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation,2014,24352
+A guide to machine learning for biologists,2021,2045
+Proceedings of the 23rd international conference on Machine learning,2006,2592
+Pattern recognition and machine learning,2007,2688
+Explainable AI: A Review of Machine Learning Interpretability Methods,2020,2719
+"Machine Learning, Neural and Statistical Classification",1995,2192
+Automatic differentiation in machine learning: a survey,2015,2097
+Introduction to Machine Learning,2019,1659
+Practical Secure Aggregation for Privacy-Preserving Machine Learning,2017,3420
+A study of the behavior of several methods for balancing machine learning training data,2004,4113
+Machine learning applications in genetics and genomics,2015,2019
+How the machine ‘thinks’: Understanding opacity in machine learning algorithms,2016,2456
+Introduction to Machine Learning,2019,1620
+Machine Learning: An Artificial Intelligence Approach,2013,2639
+Empirical Asset Pricing via Machine Learning,2020,2204
+Neural Machine Translation by Jointly Learning to Align and Translate,2014,14620
+Gaussian Processes for Machine Learning (Adaptive Computation and Machine Learning),2005,1866
+Probabilistic machine learning and artificial intelligence,2015,1971
+Machine Learning: An Applied Econometric Approach,2017,1869
+Feature selection in machine learning: A new perspective,2018,2050
+Applications of machine learning to machine fault diagnosis: A review and roadmap,2020,2667
+Deep learning,2015,81225
+UCI Repository of Machine Learning Databases,1996,2342
+"Definitions, methods, and applications in interpretable machine learning",2019,2060
+A Survey of Data Mining and Machine Learning Methods for Cyber Security Intrusion Detection,2015,3040
+Recent advances and applications of machine learning in solid-state materials science,2019,2380
+Kernel methods in machine learning,2008,1591
+Automated Machine Learning,2019,1386
+International Conference on Machine Learning (ICML)-2005,2006,2486
+Fast and Accurate Modeling of Molecular Atomization Energies with Machine Learning,2012,2378
+Double/debiased machine learning for treatment and structural parameters,2017,2424
+Bayesian Reasoning and Machine Learning,2012,1651
+Thumbs up? Sentiment Classification using Machine Learning Techniques,2002,2215
+Statistics versus machine learning,2018,1485
+DaDianNao: A Machine-Learning Supercomputer,2014,1506
+Machine learning phases of matter,2017,1472
+Machine Learning Identifies Stemness Features Associated with Oncogenic Dedifferentiation,2018,2342
+Machine Learning Interpretability: A Survey on Methods and Metrics,2019,1752
+Ensemble Machine Learning,2012,1626
+Dataset Shift in Machine Learning,2008,1514
+"Genetic Algorithms in Search, Optimization & Machine Learning",1989,2309
+All-optical machine learning using diffractive deep neural networks,2018,2410
+Trainable Weka Segmentation: a machine learning tool for microscopy pixel classification,2017,2469
+GAUSSIAN PROCESSES FOR MACHINE LEARNING,2004,1407
+The Boosting Approach to Machine Learning: An Overview,2003,2006
+Adversarial machine learning,2011,1195
+KERNEL METHODS IN MACHINE LEARNING,2008,1406
+Implementation of machine-learning classification in remote sensing: an applied review,2018,1922
+Big Data and Machine Learning in Health Care,2018,2126
+SecureML: A System for Scalable Privacy-Preserving Machine Learning,2017,1845
+Foundations of Machine Learning,2012,1162
+Foundations of Machine Learning,2019,1159
+Quantum Machine Learning in Feature Hilbert Spaces,2019,1623
+Faster and Better: A Machine Learning Approach to Corner Detection,2008,1834
+Proceedings of The 32nd International Conference on Machine Learning,2015,2038
+Machine Learning for Medical Imaging,2017,1631
+UCI Repository of Machine Learning Databases,1994,1811
+Machine learning classifiers and fMRI: A tutorial overview,2008,1672
+An introduction to quantum machine learning,2014,1238
+Techniques for interpretable machine learning,2019,1237
+Machine learning methods for solar radiation forecasting: A review,2017,1698
+A Review of Relational Machine Learning for Knowledge Graphs,2015,1647
+Tensor Decomposition for Signal Processing and Machine Learning,2017,1596
+Explainable machine-learning predictions for the prevention of hypoxaemia during surgery,2018,1980
+Random Forests,2001,125220
+Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning,2017,1991
+Machine learning in materials informatics: recent applications and prospects,2017,1750
+XGBoost,2016,48033
+Outside the Closed World: On Using Machine Learning for Network Intrusion Detection,2010,1842
+Effective Heart Disease Prediction Using Hybrid Machine Learning Techniques,2019,1860
+Foundations of Machine Learning,2012,1088
+Machine learning in medicine: a practical introduction,2019,1266
+Challenges in Representation Learning: A Report on Three Machine Learning Contests,2013,1528
+Machine-learning-assisted materials discovery using failed experiments,2016,1704
+"Machine learning for medical diagnosis: history, state of the art and perspective",2001,1663
+Comparing different supervised machine learning algorithms for disease prediction,2019,1625
+An Introduction to Machine Learning,2015,1019
+Machine learning algorithm validation with a limited sample size,2019,1676
+MXNet: A Flexible and Efficient Machine Learning Library for Heterogeneous Distributed Systems,2015,1922
+Adaptive Computation and Machine Learning,2012,1434
+Efficient and robust automated machine learning,2015,1259
+Pattern Recognition and Machine Learning,2008,1114
+Machine Learning: An Algorithmic Perspective,2009,1082
+Combining satellite imagery and machine learning to predict poverty,2016,1635
+Neural Networks And Learning Machines,2010,6573
+Map-Reduce for Machine Learning on Multicore,2007,1253
+Perspective: Machine learning potentials for atomistic simulations,2016,1485
+A general-purpose machine learning framework for predicting properties of inorganic materials,2016,1679
+"Majorization-Minimization Algorithms in Signal Processing, Communications, and Machine Learning",2016,1737
+Proceedings of the 29th International Conference on Machine Learning (ICML-12),2012,1618
+Pattern Recognition and Machine Learning,2007,1389
+Federated Optimization: Distributed Machine Learning for On-Device Intelligence,2016,1653
+Implementing Machine Learning in Health Care — Addressing Ethical Challenges,2018,1616
+Inverse molecular design using machine learning: Generative models for matter engineering,2018,2050
+Aleatoric and epistemic uncertainty in machine learning: an introduction to concepts and methods,2021,1459
+Interpretable machine learning,2020,986
+Optimization for Machine Learning,2011,897
+Some studies in machine learning using the game of checkers,2000,1441
+Machine Learning and Data Mining Methods in Diabetes Research,2017,1412
+"Machine learning in manufacturing: advantages, challenges, and applications",2016,1250
+Introduction to Machine Learning,2010,1198
+Classification Based on Decision Tree Algorithm for Machine Learning,2021,1815
+Introduction to machine learning: k-nearest neighbors,2016,1253
+Crop yield prediction using machine learning: A systematic literature review,2020,1677
+Machine learning in materials science,2019,999
+Machine Learning and Deep Learning Methods for Cybersecurity,2018,1181
+Machine learning for combinatorial optimization: A methodological tour d'horizon,2021,1326
+Materials discovery and design using machine learning,2017,1224
+Big data and machine learning algorithms for health-care delivery,2019,1418
+Hyperparameter Optimization for Machine Learning Models Based on Bayesian Optimization,2019,1409
+A survey of techniques for internet traffic classification using machine learning,2008,1632
+API design for machine learning software: experiences from the scikit-learn project,2013,1801
+The security of machine learning,2010,839
+WEKA: a machine learning workbench,2002,936
+Machine learning in bioinformatics,2006,865
+A Survey on Transfer Learning,2009,23068
+Machine Learning,2021,764
+Machine learning: An artificial intelligence approach,1983,1375
+Accelerated discovery of CO2 electrocatalysts using active machine learning,2020,1491
+A Review on Linear Regression Comprehensive in Machine Learning,2020,1206
+Machine learning: a review of classification and combining techniques,2006,1539
+Torch7: A Matlab-like Environment for Machine Learning,2011,1262
+Applications of Machine Learning in Cancer Prediction and Prognosis,2006,1098
+Automating the Construction of Internet Portals with Machine Learning,2000,1260
+Machine learning in geosciences and remote sensing,2015,1098
+Machine Learning,2012,728
+Machine learning on big data: Opportunities and challenges,2017,1196
+Evasion attacks against machine learning at test time,2013,1636
