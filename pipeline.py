@@ -214,18 +214,70 @@ print(f"Feature engineering completed. Shape: {features_df.shape}")
 # -------------------------------------------------------------
 print("\nSTEP 4 — TREND SCORE")
 
+def compute_trend_score(df):
+    """
+    Score based on MOMENTUM and ACCELERATION,
+    not absolute paper count.
+    Big fields with slowing growth score lower.
+    Small fields with fast growth score higher.
+    """
+    # Sort for correct rolling calculations
+    df = df.sort_values(['topic', 'year']).copy()
+    
+    # Growth rate: how fast is this topic growing THIS year
+    df['pub_growth'] = df.groupby('topic')['papers_count']\
+        .pct_change().fillna(0)
+    
+    # Acceleration: is growth speeding up or slowing down
+    df['acceleration'] = df.groupby('topic')['pub_growth']\
+        .diff().fillna(0)
+    
+    # Momentum: current vs 3yr average
+    df['rolling_3yr'] = df.groupby('topic')['papers_count']\
+        .transform(lambda x: x.rolling(3, min_periods=1).mean())
+    df['momentum'] = (df['papers_count'] / df['rolling_3yr'])\
+        .fillna(1)
+    
+    # Citation proxy: older papers cited more
+    df['citation_proxy'] = df.apply(
+        lambda r: r['papers_count'] * (2023 - r['year'] + 1),
+        axis=1
+    )
+    
+    # Recency bonus: recent years matter more
+    df['recency_weight'] = (df['year'] - df['year'].min()) / \
+        (df['year'].max() - df['year'].min())
+    
+    # Normalize each component to 0-1
+    from sklearn.preprocessing import MinMaxScaler
+    
+    components = {
+        'pub_growth':     0.30,   # growth rate
+        'acceleration':   0.20,   # speeding up?
+        'momentum':       0.20,   # above average?
+        'citation_proxy': 0.15,   # citation weight
+        'recency_weight': 0.15,   # recent activity
+    }
+    
+    for col in components:
+        vals = df[col].values.reshape(-1, 1)
+        df[col + '_norm'] = MinMaxScaler((0,1))\
+            .fit_transform(vals).flatten()
+    
+    # Weighted score
+    df['trend_score'] = sum(
+        df[col + '_norm'] * w
+        for col, w in components.items()
+    ) * 100
+    
+    # Final spread to 15-90 range
+    df['trend_score'] = MinMaxScaler((15, 90))\
+        .fit_transform(df[['trend_score']]).flatten()
+    
+    return df
+
+features_df = compute_trend_score(features_df)
 scaler = MinMaxScaler()
-components = ["papers_count", "citation_proxy", "pub_growth_rate", "citation_growth_rate", "momentum"]
-scaled_components = scaler.fit_transform(features_df[components])
-
-features_df["trend_score"] = (
-    0.35 * scaled_components[:, 0] +
-    0.25 * scaled_components[:, 1] +
-    0.20 * scaled_components[:, 2] +
-    0.10 * scaled_components[:, 3] +
-    0.10 * scaled_components[:, 4]
-) * 100
-
 print("Trend Score calculated successfully.")
 
 # -------------------------------------------------------------
@@ -233,26 +285,45 @@ print("Trend Score calculated successfully.")
 # -------------------------------------------------------------
 print("\nSTEP 5 — MODEL TRAINING")
 
-# Shift target trend_score by -1 within each topic group (target = next year's score)
-features_df["target_trend_score"] = features_df.groupby("topic")["trend_score"].shift(-1)
+train_df = features_df.copy()
+train_df = train_df.sort_values(['topic', 'year'])
 
-# Drop rows with NaN targets (which will be the year 2024 rows) for training/testing
-train_df = features_df.dropna(subset=["target_trend_score"]).copy()
+train_df['next_growth'] = train_df.groupby('topic')\
+    ['pub_growth'].shift(-1)
+
+train_df['next_score'] = train_df.groupby('topic')\
+    ['trend_score'].shift(-1)
+
+# Use next_score as target but clip to prevent extremes
+train_df['target'] = train_df['next_score'].clip(
+    lower=train_df['trend_score'] * 0.7,   # max 30% drop
+    upper=train_df['trend_score'] * 1.5    # max 50% rise
+)
+
+train_df = train_df.dropna(subset=['target'])
+
+print(f"Target range: {train_df['target'].min():.1f}"
+      f" to {train_df['target'].max():.1f}")
+print(f"Target mean:  {train_df['target'].mean():.1f}")
 
 feature_cols = ["papers_count", "citation_proxy", "pub_growth_rate", "citation_growth_rate", "rolling_avg_3yr", "momentum", "year"]
 X = train_df[feature_cols]
-y = train_df["target_trend_score"]
+y = train_df["target"]
 
 # Train/Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Use XGBoost Regressor
 model = xgb.XGBRegressor(
-    n_estimators=100,
-    max_depth=4,
-    learning_rate=0.05,
-    random_state=42,
-    objective="reg:squarederror"
+    n_estimators=300,
+    learning_rate=0.03,
+    max_depth=3,          # shallower = less overfitting
+    subsample=0.7,
+    colsample_bytree=0.7,
+    min_child_weight=5,   # prevents learning from tiny groups
+    gamma=0.1,            # regularization
+    reg_alpha=0.1,        # L1
+    reg_lambda=1.0,       # L2
+    random_state=42
 )
 model.fit(X_train, y_train)
 
