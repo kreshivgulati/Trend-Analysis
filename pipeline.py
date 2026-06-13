@@ -108,6 +108,10 @@ with open("data.json", "r", encoding="utf-8") as f:
             pass
 
 print(f"Data loading complete. Total records processed: {processed_count:,}. Records kept (years 2000-2024): {len(records):,}.")
+year_counts = pd.Series([r["year"] for r in records]).value_counts().sort_index()
+print("Records per year:")
+for y, c in year_counts.items():
+    print(f"  {y}: {c}")
 
 # -------------------------------------------------------------
 # STEP 2 — TOPIC MAPPING
@@ -348,8 +352,4 @@ def predict_topic(topic_name: str):
 # STEP 7 — INTERACTIVE LOOP
 # -------------------------------------------------------------
 if __name__ == "__main__":
-    while True:
-        topic = input("\nEnter a research topic (or 'quit'): ")
-        if topic.lower().strip() == 'quit':
-            break
-        predict_topic(topic)
+    predict_topic("MLSys / ML Systems")
